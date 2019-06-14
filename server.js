@@ -14,11 +14,11 @@ function respondHello (req, res) {
   res.end(JSON.stringify({ msg: 'hello' }))
 }
 
-
 function respondBase64 (req, res) {
   const phrase = req.url.replace(/^\/b64\//, '')
   res.end(JSON.stringify({ b64: Buffer.from(phrase).toString('base64') }))
 }
+
 
 function respondUserAgent (req, res) {
   const ua = req.headers['user-agent']
